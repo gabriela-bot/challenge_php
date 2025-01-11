@@ -1,0 +1,14 @@
+#!/bin/bash
+
+composer install
+
+if [ ! -f "/var/www/.env" ]; then
+    cp .env.example .env
+    php artisan key:generate
+    php artisan storage:link
+fi
+
+php-fpm
+
+
+wait
