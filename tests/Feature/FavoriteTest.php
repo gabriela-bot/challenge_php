@@ -6,7 +6,8 @@ use App\Models\Favorite;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Laravel\Sanctum\Sanctum;
+//use Laravel\Sanctum\Sanctum;
+use Laravel\Passport\Passport;
 use Tests\TestCase;
 
 class FavoriteTest extends TestCase
@@ -26,7 +27,7 @@ class FavoriteTest extends TestCase
 
         $user = User::factory()->create();
 
-        Sanctum::actingAs(
+        Passport::actingAs(
             $user
         );
 
@@ -44,7 +45,7 @@ class FavoriteTest extends TestCase
 
         $user = User::factory()->create();
 
-        Sanctum::actingAs(
+        Passport::actingAs(
             $user
         );
 
@@ -72,7 +73,7 @@ class FavoriteTest extends TestCase
 
         $user = User::factory()->create();
 
-        Sanctum::actingAs(
+        Passport::actingAs(
             $user
         );
 
@@ -98,7 +99,7 @@ class FavoriteTest extends TestCase
 
         $user = User::factory()->create();
 
-        Sanctum::actingAs(
+        Passport::actingAs(
             $user
         );
 

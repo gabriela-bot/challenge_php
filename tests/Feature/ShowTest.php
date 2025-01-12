@@ -3,7 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\User;
-use Laravel\Sanctum\Sanctum;
+use Laravel\Passport\Passport;
 use Tests\TestCase;
 
 class ShowTest extends TestCase
@@ -19,8 +19,8 @@ class ShowTest extends TestCase
     }
     public function test_can_view_single_resource(): void
     {
-        Sanctum::actingAs(
-            User::factory()->create(),
+        Passport::actingAs(
+            User::factory()->create()
         );
 
         $response = $this->getJson("/api/gif/$this->element");
@@ -30,8 +30,8 @@ class ShowTest extends TestCase
 
     public function test_error_for_nonexistent_resource(): void
     {
-        Sanctum::actingAs(
-            User::factory()->create(),
+        Passport::actingAs(
+            User::factory()->create()
         );
 
         $response = $this->getJson('/api/gif/1');
@@ -42,8 +42,8 @@ class ShowTest extends TestCase
 
     public function test_unauthorized_access_to_resource_fails(): void
     {
-        Sanctum::actingAs(
-            User::factory()->create(),
+        Passport::actingAs(
+            User::factory()->create()
         );
 
         config()->set('giphy.api_key',' ');

@@ -3,10 +3,8 @@
 namespace Tests\Feature;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\Hash;
-use Laravel\Sanctum\Sanctum;
+use Laravel\Passport\Passport;
 use Tests\TestCase;
 
 class IndexTest extends TestCase
@@ -14,8 +12,8 @@ class IndexTest extends TestCase
     use WithFaker;
     public function test_authenticated_user_can_view_resource_list(): void
     {
-        Sanctum::actingAs(
-            User::factory()->create(),
+        Passport::actingAs(
+            User::factory()->create()
         );
 
         $stringQuery = $this->faker()->word;
@@ -29,8 +27,8 @@ class IndexTest extends TestCase
 
     public function test_authenticated_user_invalid_parameters(): void
     {
-        Sanctum::actingAs(
-            User::factory()->create(),
+        Passport::actingAs(
+            User::factory()->create()
         );
 
         $response = $this->getJson("/api/gifs");
@@ -41,8 +39,8 @@ class IndexTest extends TestCase
 
     public function test_authenticated_user_invalid_credentials_api(): void
     {
-        Sanctum::actingAs(
-            User::factory()->create(),
+        Passport::actingAs(
+            User::factory()->create()
         );
 
         $stringQuery = $this->faker()->word;
@@ -58,8 +56,9 @@ class IndexTest extends TestCase
 
     public function test_authenticated_user_invalid_credentials_base_url(): void
     {
-        Sanctum::actingAs(
-            User::factory()->create(),
+
+        Passport::actingAs(
+            User::factory()->create()
         );
 
         $stringQuery = $this->faker()->word;
