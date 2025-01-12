@@ -16,14 +16,12 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-
-        Client::factory()->create([
-            'personal_access_client' => true
-        ]);
+        if(!User::where('email','test@example.com' )->fisrt()){
+            User::factory()->create([
+                'name' => 'Test User',
+                'email' => 'test@example.com',
+            ]);
+        }
 
     }
 }

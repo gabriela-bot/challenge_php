@@ -42,10 +42,15 @@ RUN useradd -G www-data,root -u $uid -d /home/$user $user
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
 
-COPY php.ini /etc/php/8.2/fpm/php.ini
-COPY laravel_start /usr/local/bin/laravel_start
+COPY docker/php.ini /etc/php/8.2/fpm/php.ini
+COPY docker/laravel_start /usr/local/bin/laravel_start
 RUN dos2unix /usr/local/bin/laravel_start
 RUN chmod +x /usr/local/bin/laravel_start
+
+COPY docker/start_container /usr/local/bin/start_container
+
+RUN dos2unix /usr/local/bin/start_container
+RUN chmod +x /usr/local/bin/start_container
 
 USER $user
 

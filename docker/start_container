@@ -1,0 +1,7 @@
+#!/bin/bash
+
+php /var/www/artisan migrate --seed
+
+php artisan passport:install
+
+exit;

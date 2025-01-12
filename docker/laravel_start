@@ -6,8 +6,8 @@ php-fpm &
 
 if [ ! -f "/var/www/.env" ]; then
     cp .env.example .env
-    php artisan key:generate
-    php artisan storage:link
+    php /var/www/artisan key:generate
+    php /var/www/artisan storage:link
 fi
 
 wait

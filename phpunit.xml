@@ -27,6 +27,7 @@
         <env name="DB_PORT" value="3306"/>
         <env name="DB_HOST" value="db"/>
         <env name="DB_USERNAME" value="root"/>
+
         <env name="DB_PASSWORD" value="prex_password"/>
 
         <env name="GIPHY_TOKEN" value="1pNY6mkRLNPXIEQiIW17UYfNEbPSG1tH"/>
