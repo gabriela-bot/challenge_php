@@ -3,9 +3,9 @@
 Este proyecto es una API REST conectada a Giphy. La aplicación ofrece cuatro endpoints:
 
 - **Login**: Autenticación de usuario.
-- **Index**: Devuelve una colección de GIFs.
-- **Búsqueda**: Recupera un GIF específico por su ID.
-- **Favoritos**: Guarda un GIF en la lista de favoritos del usuario.
+- **Search**: Devuelve una colección de GIFs.
+- **Show**: Recupera un GIF específico por su ID.
+- **Add Favorite**: Guarda un GIF en la lista de favoritos del usuario.
 
 El sistema está desarrollado con Laravel 10 y PHP 8.2. Utiliza contenedores Docker gestionados mediante Docker Compose, levantando servicios que incluyen:
 
