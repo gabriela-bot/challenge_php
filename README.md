@@ -61,7 +61,7 @@ Para obtener una clave diferente para la API de Giphy, visita:
   Añade un GIF a favoritos del usuario.
 
 ### Colección Postman
-La colección de endpoints está disponible en [Postman](https://www.postman.com/ducknaruto/challenge-php/request/f433tpx/show).
+La colección de endpoints está disponible en [Postman](https://www.postman.com/ducknaruto/challenge-php/overview).
 
 ## Tests
 Para ejecutar los tests, utiliza el siguiente comando:
@@ -72,20 +72,20 @@ docker compose exec app php artisan test
 
 #### UML
 
-![UML](./doc/UML.png)
+![UML](https://github.com/gabriela-bot/challenge_php/blob/main/doc/UML.png)
 
 #### DER
 
-![DER.png](doc/DER.png)
+![DER.png](https://github.com/gabriela-bot/challenge_php/blob/main/doc/DER.png)
 
 #### Secuencia de casos de usos
 
-![Autenticación.png](doc/Autenticaci%C3%B3n.png)
+![Autenticación.png](https://github.com/gabriela-bot/challenge_php/blob/main/doc/Autenticaci%C3%B3n.png)
 
-![ColeccionGifs.png](doc/ColeccionGifs.png)
+![ColeccionGifs.png](https://github.com/gabriela-bot/challenge_php/blob/main/doc/ColeccionGifs.png)
 
-![ById.png](doc/ById.png)
+![ById.png](https://github.com/gabriela-bot/challenge_php/blob/main/doc/ById.png)
 
-![Favorito.png](doc/Favorito.png)
+![Favorito.png](https://github.com/gabriela-bot/challenge_php/blob/main/doc/Favorito.png)
 
 
